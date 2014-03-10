@@ -12,7 +12,7 @@ class pin:
 			GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 	def set(self,status=True):
-		GPIO.output(self._pin,IO)
+		GPIO.output(self._pin,status)
 
 	def pwm(self,freq = 10, duty = 50):
 		if self._pwm_eneable:
