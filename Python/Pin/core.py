@@ -1,3 +1,6 @@
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+
 class pin:
 	def __init__(self, pin, IO = "IN"):
 		self._pin = pin
