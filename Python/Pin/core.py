@@ -11,11 +11,11 @@ class pin:
 		else:
 			GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-	def set(self,I0 = True):
-		GPIO.output(_pin,IO)
+	def set(self,status=True):
+		GPIO.output(self._pin,IO)
 
 	def pwm(self,freq = 10, duty = 50):
-		if pwm_eneable:
+		if self._pwm_eneable:
 			self._PWM.ChangeFrequency(freq)
 			self._PWM.ChangeDutyCycle(duty)
 		else:
