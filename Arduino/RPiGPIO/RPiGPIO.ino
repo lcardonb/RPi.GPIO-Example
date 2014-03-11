@@ -16,10 +16,11 @@ void loop()
 {
 	if(Serial.available()>0)
 	{
+		change = !change;
 		digitalWrite(wires[0],change);
 		for(int i=1;i<5;i++)
 		{
-			int value = random(0,1);
+			int value = random(0,2);
 			digitalWrite(wires[i],value);
 			Serial.print("wire ");
 			Serial.print(wires[i]);
