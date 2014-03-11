@@ -11,10 +11,13 @@ for wire in wires.keys():
 
 counter = 0
 
+print "----------------------------------------"
+
 while counter < 10:
 	GPIO.wait_for_edge(wires['white'], GPIO.BOTH)
 	for wire in wires.keys():
 		print 'Wire {} is {}'.format(wire,GPIO.input(wires[wire]))
 	counter+=1
-
+	print "----------------------------------------"
+	
 GPIO.cleanup()

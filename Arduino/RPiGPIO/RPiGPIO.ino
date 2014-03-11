@@ -17,6 +17,7 @@ void loop()
 	if(Serial.available()>0)
 	{
 		change = !change;
+	
 		digitalWrite(wires[0],change);
 		for(int i=1;i<5;i++)
 		{
